@@ -8,16 +8,16 @@ const twilio = require('twilio');
 const PORT = process.env.PORT || 3000;
 const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
-client.calls.create(
-  {
-    url: 'http://demo.twilio.com/docs/voice.xml',
-    to: '+13109999634',
-    from: '+16572206273',
-  },
-  (err, call) => {
-    process.stdout.write(call.sid);
-  }
-);
+// client.calls.create(
+//   {
+//     url: 'http://demo.twilio.com/docs/voice.xml',
+//     to: '+13109999634',
+//     from: '+16572206273',
+//   },
+//   (err, call) => {
+//     process.stdout.write(call.sid);
+//   }
+// );
 
 app.post('/voice', (req, res, next) => {
   // Use the Twilio Node.js SDK to build an XML response
